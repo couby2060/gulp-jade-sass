@@ -35,9 +35,9 @@ gulp.task('bs-reload', function() {
 gulp.task('pug',function() {
  gulp.src(JADE_SOURCE + '/**/*.jade')
     .pipe(plumber({
-        errorHandler: function(error) {
-            console.log(error.message);
-            generator.emit('end');
+      errorHandler: function(error) {
+        console.log(error.message);
+        //generator.emit('end');
     }}))
     .pipe(pug({
         doctype: 'html',
